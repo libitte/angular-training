@@ -4,6 +4,25 @@
 
 <div ng-if="false">こんにちは！こんにちは！</div>
 
-<div ng-show="true">Im Sick!</div>
+<div ng-show="myModel == 'Hello'">Im Sick!</div>
 
-<div ng-show="true">こんにちは！こんにちは！</div>
+<div ng-show="myModel == 'こん'">こんにちは！こんにちは！</div>
+
+<input type="text" ng-model="myModel">
+
+<button ng-click="showMyModel();">Show</button>
+
+<div>価格: {{ 10000000 | currency:"$" }}</div>
+
+<div>curator: {{ 'Name' | uppercase }}</div>
+<div>curator: {{ 'Name' | lowercase }}</div>
+
+
+<p>{{myData.name}}</p>
+
+<!--<div my-directive></div>-->
+<my-directive></my-directive>
+
+<div>{{ 'Hello' | myFilter }}</div>
+
+<button ng-click="hello();">Show</button>
