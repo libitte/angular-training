@@ -1,0 +1,10 @@
+<p>This is the mery view.</p>
+
+<ul>
+  <li ng-repeat="image in images">
+    <img width="100" ng-src="{{image.image_url}}">
+    <button ng-if="!image.status" ng-click="addImage(image);">追加する</button>
+    <button ng-if="image.status == 'adding'">追加なう...</button>
+    <button ng-if="image.status == 'added'">追加しました</button>
+    </li>
+</ul>
